@@ -121,6 +121,22 @@ a:hover{
    
 }
 
+/* Facilities */
+.facilities {
+    background-color: #9EA799;
+    width:80%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-content:center;
+    align-items:center;
+    padding:10px;
+    border: solid 2px #1E303C;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 /* Booking Form */
 
 h3 {
@@ -343,6 +359,10 @@ footer #social_links li{
         margin:auto;
     }
 
+    .booking .reviews {
+        width: 80%;
+    }
+
     footer {
         width:100%;
         display:flex;
@@ -428,6 +448,9 @@ footer #social_links li{
         background-color: #9EA799;
         margin:auto;
     }
+    .booking .reviews {
+        width: 80%;
+    }
 
     footer {
         width:100%;
@@ -462,6 +485,7 @@ footer #social_links li{
     #mainnav ul {
         display:flex;
         flex-wrap:wrap;
+        padding-right:30px;
 
     }
 
@@ -482,6 +506,7 @@ footer #social_links li{
         max-height:120px;
         max-width:120px;
         padding-bottom:20px;
+        padding-left:30px;
     }
 
     .container {
@@ -516,6 +541,9 @@ footer #social_links li{
         align-items:center;
         background-color: #9EA799;
         margin:auto;
+    }
+    .booking .reviews {
+        width: 100%;
     }
 
     footer {
