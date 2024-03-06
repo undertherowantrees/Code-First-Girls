@@ -1,0 +1,620 @@
+Delivered-To: danielle@undertherowantrees.co.uk
+Received: by 2002:a05:7022:2602:b0:72:d83d:8b36 with SMTP id eq2csp411521dlb;
+        Thu, 4 Jan 2024 03:22:42 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IECvTQx7lmuH38D76nsTlSDovdNG7Y/673uq5Z35I3XPG/M945mgn3uLtq6Kq34lXEQ+EAU
+X-Received: by 2002:ac8:7f06:0:b0:427:e955:4f08 with SMTP id f6-20020ac87f06000000b00427e9554f08mr624807qtk.74.1704367362515;
+        Thu, 04 Jan 2024 03:22:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1704367362; cv=none;
+        d=google.com; s=arc-20160816;
+        b=XkpDe+iWANBMxFRPsBMUnLvTQ8lVNMcUQ+5dRhmGlmO59Se/jXuzF1eDiYiKVyWZ5x
+         Jd4/BCg7Q7ESbfG5BrbOszKuoEBvoNj01gW5i5+Mb4b6o+TsMQtLXYynYB69jgFQV+1Y
+         LjhlpqWUC1lhyzDIls/eFQ9vwjrcUAUH37KxS8kn0Ug++yAJxBYWWFWxtxcFG8I0gXlN
+         FIGym6od/O58ETkEJPuqs8cXClUPrOXjYonu51854acAx4tirFDj35O2v36+jIYboAz/
+         98mrjYHf7QoOUuLfN5WktBQHEaMsDQaY+8QpS+50MK9kJRAWd8eIOY/pCXCWK3U91VMY
+         sj/Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=form-sub:mime-version:subject:message-id:to:reply-to:from:date
+         :dkim-signature:dkim-signature;
+        bh=0yU7ScYX3urhTDTRacdnO1nA9tXtzv1kKA3UXEOZtFs=;
+        fh=QxpMMoTlwtFJr6rhYYhlSYT1w9F8tcOq4CoI7pQkb/0=;
+        b=Lp7zIgfPJZu+r27/qcHA/tew/ov/traOj5iqSyzmY4BqL0LD+PL45v5Zdnv88vRugk
+         gd4a1d6PDurladdKzcq3quvjhRtVAX8Fz3xhGS2yORgp3nMvfEL11pGJ2wsnhoMQeYGe
+         zXvP5Peh3DtqT4DnMszVpsNRZKxuW1pZYX/JPa1vgY2K9TGCYQqUCDa81hzBbU/YaFxx
+         NOZgn0bfet5p8gRE1UGOk0U2kKuhCWASIZ5Xicq3NBeCvOtfx9CCRCJ6UP571N+ZC3Qc
+         yLRISHhCojZBp+M9oSNjmTbgdHQV2GyRLhL6BArGcD3Dh2DFGDjsP+5xIrKczA01rhpq
+         wZDw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@bid47q1.cs.hubspotemail.net header.s=hs2 header.b=edpMUHlz;
+       dkim=pass header.i=@codefirstgirls.com header.s=hs1-14559520 header.b=NivMGNPS;
+       spf=pass (google.com: domain of 1axbga7k76wnz4op1hezg1um3oabw4k4wl0v06@bid47q1.cs.hubspotemail.net designates 158.247.23.235 as permitted sender) smtp.mailfrom=1axbga7k76wnz4op1hezg1um3oabw4k4wl0v06@bid47q1.cs.hubspotemail.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=codefirstgirls.com
+Return-Path: <1axbga7k76wnz4op1hezg1um3oabw4k4wl0v06@bid47q1.cs.hubspotemail.net>
+Received: from bid47q1.bid47q1.cs.hubspotemail.net (bid47q1.bid47q1.cs.hubspotemail.net. [158.247.23.235])
+        by mx.google.com with ESMTPS id d13-20020ac85d8d000000b0042548ac376fsi31458578qtx.718.2024.01.04.03.22.42
+        for <danielle@undertherowantrees.co.uk>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 04 Jan 2024 03:22:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of 1axbga7k76wnz4op1hezg1um3oabw4k4wl0v06@bid47q1.cs.hubspotemail.net designates 158.247.23.235 as permitted sender) client-ip=158.247.23.235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bid47q1.cs.hubspotemail.net header.s=hs2 header.b=edpMUHlz;
+       dkim=pass header.i=@codefirstgirls.com header.s=hs1-14559520 header.b=NivMGNPS;
+       spf=pass (google.com: domain of 1axbga7k76wnz4op1hezg1um3oabw4k4wl0v06@bid47q1.cs.hubspotemail.net designates 158.247.23.235 as permitted sender) smtp.mailfrom=1axbga7k76wnz4op1hezg1um3oabw4k4wl0v06@bid47q1.cs.hubspotemail.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=codefirstgirls.com
+Received: by 172.16.225.54 with SMTP id axgrxyqepup3h6fvr2y2ysnwmye6u5hsslir3r;
+        Thu, 4 Jan 2024 11:22:42 GMT
+DKIM-Signature: v=1; s=hs2; d=bid47q1.cs.hubspotemail.net; 
+        i=@bid47q1.cs.hubspotemail.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=0yU7ScYX3urhTDTRacdnO1nA9tXtzv1kKA3UXEOZtFs=; 
+        b=edpMUHlzdaBZklQ3WhPnPAzdbelHotXFEAMoqAA5y5aAKjvNuhIb3W0liGCgb0
+         Qc9OBfaicpDVxZqg9yVKWqHW28qFO0ehxqtu60T58hsZ9wBQDPZ+kcPoFEJx0B/
+         O3UpZ4nW3+UgukLwbV7fuSq0nUpUpj3RY+O+BZg7X2ty8L6zBPDiqYoiv5TrnvM
+         XHj8QucUMK2iC7Qn1zMS6/H1TY41QzGl0+WMT3SlQ/gqs4TIekfZP8Ka9Hm3Ar4
+         E7ZywmYUzsQK9JLM/YXlxuyYzjOFPK/XDVOz2iWxPYblu5CINTAVLkAgeaxIxg9
+         PDkN0Rz1oHtwYp+0VZoqxb6/3CLQ==; q=dns/txt; t=1704367362; 
+        x=1704630162;
+DKIM-Signature: v=1; s=hs1-14559520; d=codefirstgirls.com; 
+        i=@codefirstgirls.com; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=0yU7ScYX3urhTDTRacdnO1nA9tXtzv1kKA3UXEOZtFs=; 
+        b=NivMGNPSm9ZK46tpSlvwihYkeown2IzFjtHoCakMg6ytE6ob/Xv1iQaEGaRg6l
+         moLZR5mqP4sCyupj7d1+dObGLEaJ93dAOIyMm0aPNKf3+5JPxTOqgftQM9woGV0
+         drdJJJjCyBWHxhbsWvZR1Qo0XK1hC4+xYM2SKmI6POeKc1VyNWWM3IS03aXj0gr
+         BBSJdCzQZVnRTle0OQ+dph/9IhM+OJm0m/+dzugljoYVCEM9+nMvfywdbb2qoj1
+         ABbhFQ/VxLmoymiD8dbXzX3N41AyVYD+dNuvEyIqgFJp6IjDB8wScPaP2SXM3c7
+         fi2rr2bJqm+64DLteyE20P7sSYlA==; q=dns/txt; t=1704367362; 
+        x=1704630162;
+Return-Path: <1axbga7k76wnz4op1hezg1um3oabw4k4wl0v06@bid47q1.cs.hubspotemail.net>
+X-HS-Cid: 1axe9o3rp0irmhnrdd2cxbx02y1tqk5ivkeywa
+Date: Thu, 4 Jan 2024 11:22:42 GMT
+From: Code First Girls <classes@codefirstgirls.com>
+Reply-To: classes@codefirstgirls.com
+To: danielle@undertherowantrees.co.uk
+Message-ID: <1704367361780.e781dd41-3203-4301-ba57-b88beec5a207@bid47q1.cs.hubspotemail.net>
+Subject: Code First Girls Course Application Update
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_538897_1077658762.1704367362018"
+Form-Sub: v=1; ip=none
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+
+------=_Part_538897_1077658762.1704367362018
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Thanks for applying! You're almost there, here's an update on your applicat=
+ion!
+
+Hi Danielle,
+
+Thank you for registering for our Introduction to Web Development Coding Ki=
+ckstarter Course. We're excited to offer you a place on the course!
+
+Please confirm your place as soon as possible to avoid disappointment - the=
+y are allocated on a first come first served basis.
+
+Please register here (https://d1Ks-M04.na1.hubspotlinks.com/Ctc/GF+113/d1Ks=
+-M04/VX7t6y2nFkL_V3q5v8565khxVfQRxk57TQSHN8XrLGM3lcq-W95jsWP6lZ3nDW5Kq_nD6d=
+ynQlW31NH1b8KFFSKW96SCFt6xJChBW3_1Sh_40dY1VW8h_fqr3jLNqtW6GW22k7dBsD2W6Kz1B=
+v3mnzNfMGJmf7VZVbhW362-Vs6N-D5sW79jWwm1pkHrcW5j5bzq2ytXzfV6lZph23v7nkN17JGj=
+Y5mm8TW5jTCrX2srkSmN8403_PYSwr3VCXCsT58jPxZW3tDSSk403RWlW5T9RRT3sqJtKW4TJyd=
+w6lmx2YW6XlqTV18pFy7VmL4qq5gQ01FW44drFd4DSNb5W60-H3q4vWzwnW4NXfx17nppT-N24r=
+nFfmNfbdW29dqdL8rGG3QW7cs2rf3MZcZRW5ky-v44vGpJ5W88hft_8wlpCBV9Wnc42Ygh1Hf34=
+Jz6R04 ) as soon as possible so you don't miss out! You must use the same e=
+mail address you used when registering (i.e. this one!)
+
+Confirm your place
+(https://d1Ks-M04.na1.hubspotlinks.com/Ctc/GF+113/d1Ks-M04/VX7t6y2nFkL_V3q5=
+v8565khxVfQRxk57TQSHN8XrLGM3lcq-W95jsWP6lZ3nDW5Kq_nD6dynQlW31NH1b8KFFSKW96S=
+CFt6xJChBW3_1Sh_40dY1VW8h_fqr3jLNqtW6GW22k7dBsD2W6Kz1Bv3mnzNfMGJmf7VZVbhW36=
+2-Vs6N-D5sW79jWwm1pkHrcW5j5bzq2ytXzfV6lZph23v7nkN17JGjY5mm8TW5jTCrX2srkSmN8=
+403_PYSwr3VCXCsT58jPxZW3tDSSk403RWlW5T9RRT3sqJtKW4TJydw6lmx2YW6XlqTV18pFy7V=
+mL4qq5gQ01FW44drFd4DSNb5W60-H3q4vWzwnW4NXfx17nppT-N24rnFfmNfbdW29dqdL8rGG3Q=
+W7cs2rf3MZcZRW5ky-v44vGpJ5W88hft_8wlpCBV9Wnc42Ygh1Hf34Jz6R04 )
+
+Once confirmed, we'll send you more information with everything you need to=
+ know to kickstart your coding journey!
+
+What if I miss out on a place?
+
+Our classes are incredibly popular and we're working to get everyone a plac=
+e as soon as possible. If you miss out on a spot, please be aware that we a=
+re working on a waitlist system which will reallocate you a place on an upc=
+oming class within three months of the original course start date.
+
+If you are offered a place on a class you can't attend, you must apply to a=
+ different one via the website as you will have been removed from the waitl=
+ist, even if you don't accept the place.
+
+The Code First Girls Team
+
+CODE FIRST GIRLS, 10 Devonshire Square, London, EC2M 4YP
+------=_Part_538897_1077658762.1704367362018
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>Code First Girls Course Application Update</title>
+    <meta property=3D"og:title" content=3D"Code First Girls Course Applicat=
+ion Update">
+    <meta name=3D"twitter:title" content=3D"Code First Girls Course Applica=
+tion Update">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #EAF0F6;padding: 20px 0 !import=
+ant}
+</style>
+<![endif]-->
+   =20
+     =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"http://codefirstgirls-14559520.hs-sites.com/-temporary-slug-d381ee=
+ac-22e8-45c3-9db7-9128c139f70c"><meta name=3D"robots" content=3D"noindex,fo=
+llow"><!--[if !((mso)|(IE))]><!-- --><style type=3D"text/css">.moz-text-htm=
+l .hse-column-container{max-width:600px !important;width:600px !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-12{max-width:600px !important;width:600px !impo=
+rtant}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-12=
+{max-width:600px !important;width:600px !important}
+}@media only screen and (max-width:639px){img.stretch-on-mobile,.hs_rss_ema=
+il_entries_table img,.hs-stretch-cta .hs-cta-img{height:auto !important;wid=
+th:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+}</style><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_=
+main a[x-apple-data-detectors]{color:inherit !important;text-decoration:non=
+e !important;font-size:inherit !important;font-family:inherit !important;fo=
+nt-weight:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#EAF0F6" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Arial, sans-serif; font-size:15px; color:#2=
+3496d; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#EAF=
+0F6;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+">Thanks for applying! You're almost there, here's an update on your applic=
+ation!</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" style=3D"background-color:#eaf0f6" b=
+gcolor=3D"#eaf0f6">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"border-spacing:0 !important; border-c=
+ollapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; margin:0; pad=
+ding:0; width:100% !important; min-width:320px !important; height:100% !imp=
+ortant" width=3D"100%" height=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"border-=
+collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-se=
+rif; font-size:15px; color:#23496d; word-break:break-word">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section-0" class=3D"hse-section h=
+se-section-first" style=3D"padding-left:10px; padding-right:10px; padding-t=
+op:20px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; background-color:#FFFFFF; padding-bottom:10px; padding-top:=
+10px" bgcolor=3D"#FFFFFF">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#FFFFFF">
+      <tr style=3D"background-color:#FFFFFF;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-bottom:10px; padding-top:=
+10px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column-0-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-0-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentat=
+ion" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-spa=
+cing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-tabl=
+e-rspace:0pt">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"bord=
+er-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans=
+-serif; color:#23496d; word-break:break-word; text-align:center; padding:10=
+px 20px; font-size:0px">
+        <img alt=3D"Confirm your place Coding Kickstarter Emails" src=3D"ht=
+tps://hs-14559520.f.hubspotemail.net/hub/14559520/hubfs/Banners/Confirm%20y=
+our%20place%20Coding%20Kickstarter%20Emails.png?width=3D1120&amp;upscale=3D=
+true&amp;name=3DConfirm%20your%20place%20Coding%20Kickstarter%20Emails.png"=
+ style=3D"outline:none; text-decoration:none; -ms-interpolation-mode:bicubi=
+c; max-width:100%; font-size:16px" width=3D"560" align=3D"middle" srcset=3D=
+"https://hs-14559520.f.hubspotemail.net/hub/14559520/hubfs/Banners/Confirm%=
+20your%20place%20Coding%20Kickstarter%20Emails.png?upscale=3Dtrue&amp;width=
+=3D1120&amp;upscale=3Dtrue&amp;name=3DConfirm%20your%20place%20Coding%20Kic=
+kstarter%20Emails.png 560w, https://hs-14559520.f.hubspotemail.net/hub/1455=
+9520/hubfs/Banners/Confirm%20your%20place%20Coding%20Kickstarter%20Emails.p=
+ng?upscale=3Dtrue&amp;width=3D2240&amp;upscale=3Dtrue&amp;name=3DConfirm%20=
+your%20place%20Coding%20Kickstarter%20Emails.png 1120w" sizes=3D"(max-width=
+: 560px) 100vw, 560px">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-1" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; background-color:#ffffff; padding-top:30px" bgcolor=3D"#fff=
+fff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-top:30px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column-1-0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"border-spacing:0 !important; border-collapse:collapse; mso-=
+table-lspace:0pt; mso-table-rspace:0pt"><tbody><tr><td class=3D"hs_padded" =
+style=3D"border-collapse:collapse; mso-line-height-rule:exactly; font-famil=
+y:Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-word; =
+padding:10px 20px"><div id=3D"hs_cos_wrapper_module-1-0-0" class=3D"hs_cos_=
+wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: i=
+nherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module-1-=
+0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_ric=
+h_text" style=3D"color: inherit; font-size: inherit; line-height: inherit;"=
+ data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text"><p styl=
+e=3D"mso-line-height-rule:exactly; line-height:175%"><span style=3D"color: =
+#000000;">Hi Danielle, </span><br><br><span style=3D"color: #000000;">Thank=
+ you for registering for our <span style=3D"font-weight: normal;">Introduct=
+ion to Web Development</span>&nbsp;Coding Kickstarter Course. We're excited=
+ to offer you a place on the course!</span></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><span style=3D"=
+color: #000000;">Please confirm your place as soon as possible to avoid dis=
+appointment - they are allocated on a first come first served basis.</span>=
+</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><span style=3D"=
+color: #000000;"><strong data-stringify-type=3D"bold">Please register <a hr=
+ef=3D"https://d1Ks-M04.na1.hubspotlinks.com/Ctc/GF+113/d1Ks-M04/VX7t6y2nFkL=
+_V3q5v8565khxVfQRxk57TQSHN8XrLGM3m2ndW95jsWP6lZ3mlVGgyQb65c1c0N6VkzJBVc3vTW=
+6PbSnn1LhBxtN1Nh9jSZdfwSW8pJxxX79m4n5W1phPFN97vsmsW4QWKFP7mP83-VQ-Nzm2j4hWF=
+W6s9g8k4ssW0tW3srlqL3xDdt4W4K4rgL26mMzfW8mTZl42KM7qVW8FP1d84G8NwGW3nQC_g2Y1=
+RTLW12CwP_57JHW7W1sWL404jhK73W8c2-h282XrBxW62Y0jz271SVLN3MjtJLhG8clMtQyg9_p=
+LjXW883YHD2FNHYmW361Gxz38QvtLVtwZ4p84mP89W1y7yf97xHd7HV96JPY1--lmQW6b0lML76=
+2wcBW7zCq3_1d3Y6YW3PDN-N7cMvQ5W51g_n25Scm1YW31nbLZ80V3k_f57LX4d04" rel=3D"n=
+oopener" style=3D"mso-line-height-rule:exactly; color:#00a4bd" data-hs-link=
+-id=3D"0" target=3D"_blank">here</a> as soon as possible so you don't miss =
+out! You must use the same email address you used when registering (i.e. th=
+is one!)</strong></span></p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1631630336500" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; background-color:#ffffff" bgcolor=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column_1631630336500_0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"border-spacing:0 !important; border-collapse:collapse; mso-=
+table-lspace:0pt; mso-table-rspace:0pt"><tbody><tr><td class=3D"hs_padded" =
+style=3D"border-collapse:collapse; mso-line-height-rule:exactly; font-famil=
+y:Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-word; =
+padding:10px 20px"><div id=3D"hs_cos_wrapper_module_16316303363851" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=
+=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-=
+general-type=3D"widget" data-hs-cos-type=3D"module">
+ =20
+  <table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" style=3D"border-spacing:0 !important; =
+mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate!import=
+ant">
+    <tbody><tr>
+        <!--[if mso]>
+      <td align=3D"center" valign=3D"middle" bgcolor=3D"#00b9f9" valign=3D"=
+middle" style=3D"border-radius:0px;cursor:auto;background-color:#00b9f9;pad=
+ding:12px 18px;">
+    <![endif]-->
+    <!--[if !mso]><!-- -->
+      <td align=3D"center" valign=3D"middle" bgcolor=3D"#00b9f9" style=3D"b=
+order-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, s=
+ans-serif; font-size:15px; color:#23496d; word-break:break-word; border-rad=
+ius:0px; cursor:auto; background-color:#00b9f9">
+   <!--<![endif]-->
+        <a href=3D"https://d1Ks-M04.na1.hubspotlinks.com/Ctc/GF+113/d1Ks-M0=
+4/VX7t6y2nFkL_V3q5v8565khxVfQRxk57TQSHN8XrLGM3m2ndW95jsWP6lZ3lGW8VCRzr1lhn-=
+ZW5nvnnC13dKsSW5Pl6z92XKw_mVm_wNr5pp0DJN81CpHXZKVS6W54XH-033NsDvW3ZfZtK6vY7=
+gDW2xsFCc1BKDXzW7NSP6j7KTkXLW2p1H7h5m6zhxW5RyBDF1fP616W2XsSbS3Zn8PWW22bqNk1=
+YXtwkW6WL2RD5NG1nfVf1zgC3NffDnVYy1-48DKWWkN27k5PqJ-75qW5NnTBf2cS2ftW8JxVJ02=
+y5YqyVkkFg68LfTBZW46kR2J71FxCpW697SLK8yRccNW25wTsd4SP9T6W4qVmdr29wwbCW3pZtV=
+337j0ppW94ctr72n9FQkV2Zr7F5zS5zFW5NXyCG64QNZMW1VLQgJ3BQ39RVfXh6z6448--f17l8=
+Xb04" target=3D"_blank" style=3D"color:#00a4bd; mso-line-height-rule:exactl=
+y; font-size:20px; font-family:Arial, sans-serif; Margin:0; text-transform:=
+none; text-decoration:none; padding:12px 18px; display:block" data-hs-link-=
+id=3D"1">
+          <strong style=3D"color:#000000;font-weight:bold;text-decoration:n=
+one;font-style:normal;">Confirm your place </strong>
+        </a>
+      </td>
+    </tr>
+  </tbody></table>
+</div></td></tr></tbody></table>
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" style=3D"border-spacing:0 !important; border-collapse:collapse; mso-ta=
+ble-lspace:0pt; mso-table-rspace:0pt"><tbody><tr><td class=3D"hs_padded" st=
+yle=3D"border-collapse:collapse; mso-line-height-rule:exactly; font-family:=
+Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-word; pa=
+dding:19px 20px 10px"><div id=3D"hs_cos_wrapper_module_16448361422781" clas=
+s=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=
+=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-=
+general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapp=
+er_module_16448361422781_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs=
+_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; l=
+ine-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><h2 style=3D"margin:0; mso-line-height-rule:exactly; font-si=
+ze:15px; line-height:175%; font-weight:normal"><span style=3D"color: #00000=
+0;">Once confirmed, we'll send you more information with everything you nee=
+d to know to kickstart your coding journey!</span></h2></div></div></td></t=
+r></tbody></table>
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" style=3D"border-spacing:0 !important; border-collapse:collapse; mso-ta=
+ble-lspace:0pt; mso-table-rspace:0pt"><tbody><tr><td class=3D"hs_padded" st=
+yle=3D"border-collapse:collapse; mso-line-height-rule:exactly; font-family:=
+Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-word; pa=
+dding:10px 20px"><div id=3D"hs_cos_wrapper_module_16830394570552" class=3D"=
+hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"c=
+olor: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-gener=
+al-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_mo=
+dule_16830394570552_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_=
+wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-h=
+eight: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"ri=
+ch_text"><p style=3D"mso-line-height-rule:exactly; line-height:175%; font-w=
+eight:bold"><span style=3D"color: #000000;">What if I miss out on a place?<=
+/span></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><span style=3D"=
+color: #000000;">Our classes are incredibly popular and we're working to ge=
+t everyone a place as soon as possible. If you miss out on a spot, please b=
+e aware that we are working on a waitlist system which will reallocate you =
+a place on an upcoming class within three months of the original course sta=
+rt date.</span></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><span style=3D"=
+color: #000000;">If you are offered a place on a class you can't attend, yo=
+u must apply to a different one via the website as you will have been remov=
+ed from the waitlist, even if you don't accept the place.</span></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p></div=
+></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1644847855486" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; background-color:#ffffff" bgcolor=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column_1644847855486_0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"border-spacing:0 !important; border-collapse:collapse; mso-=
+table-lspace:0pt; mso-table-rspace:0pt"><tbody><tr><td class=3D"hs_padded" =
+style=3D"border-collapse:collapse; mso-line-height-rule:exactly; font-famil=
+y:Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-word; =
+padding:10px 20px"><div id=3D"hs_cos_wrapper_module_16448478554655" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=
+=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-=
+general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapp=
+er_module_16448478554655_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs=
+_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; l=
+ine-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><h2 style=3D"margin:0; mso-line-height-rule:exactly; font-si=
+ze:15px; line-height:125%; font-weight:normal"><span style=3D"color: #00000=
+0; font-weight: bold;">The Code First Girls Team</span></h2></div></div></t=
+d></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-2" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px; padding-bottom:20px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; padding-bottom:20px; padding-top:20px">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-bottom:20px; padding-top:=
+20px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column-2-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-2-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table role=3D"presentation" class=3D"hse-footer hse=
+-secondary" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"bor=
+der-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; m=
+so-table-rspace:0pt; font-family:Arial, sans-serif; font-size:12px; line-he=
+ight:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"border-collapse:collapse=
+; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15=
+px; color:#23496d; word-break:break-word; text-align:center; margin-bottom:=
+0; line-height:135%; padding:10px 20px">
+        <p style=3D"mso-line-height-rule:exactly; font-family:Arial, sans-s=
+erif; font-size:12px; font-weight:normal; text-decoration:none; font-style:=
+normal; color:#23496d">
+          CODE FIRST GIRLS, 10 Devonshire Square, London, EC2M 4YP
+        </p>
+       =20
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://d1Ks-M04.na1.hubspotlinks.com/Cto/GF+113/d1Ks-M04/VX7t6=
+y2nFkL_V3q5v8565khxVfQRxk57TQSHW8XrLpH8fYzSx2D21" alt=3D"" width=3D"1" heig=
+ht=3D"1" border=3D"0" style=3D"display:none!important;min-height:1px!import=
+ant;width:1px!important;border-width:0!important;margin-top:0!important;mar=
+gin-bottom:0!important;margin-right:0!important;margin-left:0!important;pad=
+ding-top:0!important;padding-bottom:0!important;padding-right:0!important;p=
+adding-left:0!important"></body></html>
+------=_Part_538897_1077658762.1704367362018--
+

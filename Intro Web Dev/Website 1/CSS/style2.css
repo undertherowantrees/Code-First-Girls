@@ -1,0 +1,106 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    background-color: darkslategrey;
+    color:aliceblue;
+    line-height:1.5;
+    margin:0;
+    padding:0;
+}
+
+/* Global */
+.container{
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    justify-content:space-around;
+    width:80%;
+    overflow:hidden;
+}
+
+.light{
+    background-color: aliceblue;
+    color:darkslategray;
+    padding:15px;
+    margin:10px 0 10px 0;
+}
+
+.button_1{
+    height:30px;
+    background-color: crimson;
+    color:antiquewhite;
+    padding: 0 20px 0 20px;
+    border:0;
+    border-radius:5px;
+}
+
+/* header */
+
+    header{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        background-color: darkslategray;
+    }
+
+    #branding a{
+        color:coral;
+        text-decoration:none;
+        letter-spacing: 2px;
+    }
+
+    #mainnav{
+        display:flex;
+        flex-direction:row;
+    }
+
+    #mainnav li{
+        list-style:none;
+        padding-right:10px;
+    }
+
+    #mainnav a{
+        color:antiquewhite;
+        text-decoration: none;
+    }
+
+    #mainnav a:hover{
+        color:coral;
+    }
+
+    #mainnav .current a{
+        color:crimson;
+        font-style:bold;
+        text-decoration:underline;
+    }
+
+    /* Newsletter */
+
+    .newsletter{
+        background-color: aliceblue;
+        color:darkslategray;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:flex-end;
+        align-content:center;
+    }
+
+    .newsletter h3{
+        padding-right: 10px;
+    }
+
+    .newsletter #sign_up{
+        justify-content:flex-end;
+        align-content:center;
+        padding-top:18px;
+        padding-bottom:10px;
+    }
+
+    .newsletter #sign_up input{
+        height: 25px;
+        color:darkslategray;
+    }
+
+    .newsletter #sign_up .button_1{
+        margin-right:20px;
+    }

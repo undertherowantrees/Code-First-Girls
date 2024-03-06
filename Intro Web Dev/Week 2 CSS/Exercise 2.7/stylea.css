@@ -1,0 +1,26 @@
+nav {
+    background-color: bisque;
+}
+ul {
+    list-style: none;
+}
+li { 
+    display: inline}
+header {
+    height: 400px;
+    background-color: aquamarine;
+}
+h1 {
+    text-align: center;
+    color:blueviolet;
+}
+p {
+    width: 300px;
+    margin-left: 30px;
+}
+.specialText {
+    color: red;
+}
+#first {
+    font-size: 30px;
+}

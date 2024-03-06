@@ -1,0 +1,10 @@
+h1 {
+    border: solid 1px blueviolet;
+    padding: 20px;
+    padding-left: 40px;
+    margin: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+.bright {
+    background-color: blanchedalmond;
+}

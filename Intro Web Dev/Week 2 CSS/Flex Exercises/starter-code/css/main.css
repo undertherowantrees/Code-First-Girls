@@ -1,0 +1,38 @@
+/* .flexItem will apply to all elements with a class of flexItem */
+.flexItem {
+  padding: 30px;
+  border: 1px solid red;
+  margin: 20px;
+  width: flex;
+}
+
+/* 
+a) Position the three divs side by side on the same line
+*/
+.flexContainerA {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 
+b) Position each div on a new line
+*/
+.flexContainerB {
+  align-items: flex-start;
+}
+
+/* 
+c) Position each div on a new line and have them all in the center
+*/
+
+.flexContainerC {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+/* 
+d) Copy-paste a huge amount of text into just one div and see
+what happens. How can you solve this? (Use https://css-
+tricks.com/snippets/css/a-guide-to-flexbox/ for help!) 
+*/

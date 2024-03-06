@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">  
+
+    </head>
+    <body>
+    
+        <!-- carousel -->
+        <!-- as you can see, we use the unique identifying classes for structure and also to 
+        determine which elements we want to cycle through. Even the captions have an inbuilt Bootstrap
+        class which we can use, instead of having to create our own. -->
+
+            <!-- Let's go through each of our 3 slides and see how fluid the changes -->
+
+        <h1>Sad Cat Carousel</h1>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1590920935080-735e1498d043?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80" class="d-block w-100" alt="...">
+                <div id="cat-1-info" class="carousel-caption d-none d-md-block">
+                    <h5>Subject: Cat #1</h5>
+                    <p>Contemplating the climate crisis.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1547565527-389ccd19e85b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80" class="d-block w-100" alt="...">
+                <div id="cat-2-info" class="carousel-caption d-none d-md-block">
+                    <h5>Subject: Cat #2</h5>
+                    <p>Slowly overcoming Aquaphobia</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1602245742512-be50414eb855?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
+                <div id="cat-3-info" class="carousel-caption d-none d-md-block">
+                    <h5>Subject: Cat #3</h5>
+                    <p>Regrets eating the family goldfish</p>
+                  </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <style>
+
+            /* just adding some styling to make the carousel more depressing */
+            #carouselExampleIndicators {
+                transform: translate(-50%, -50%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 60%;
+                height: 70%;
+            }
+
+            
+            body {
+                background-color: #050101;
+            }
+
+            
+            h1 {
+                color: #ffffff;
+                text-align: center;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            h5, p {
+                color: white;
+                text-shadow: 2px 2px 4px #000000;
+            }
+
+            /* placing carousel captions at the very bottom of the image */
+            .carousel-caption {
+                bottom: 0;
+            }
+            
+          </style>
+        
+        <script src="script.js"></script>
+        <!-- Bootstrap JS -->
+        <!-- JavaScript Bundle with Popper -->
+        <!-- this allows us to use the carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+
+
+</body>
+</html>
